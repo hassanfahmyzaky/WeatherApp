@@ -10,7 +10,6 @@ A responsive weather application built with React and Tailwind CSS that displays
 - 📍 Get weather for current location
 - 🌡️ Temperature in Celsius/Fahrenheit
 - 🌦️ 5-day weather forecast
-- ☀️🌙 Light/Dark mode toggle
 - ⏱️ Auto-refresh every 10 minutes
 - 📱 Fully responsive design
 
@@ -23,6 +22,7 @@ A responsive weather application built with React and Tailwind CSS that displays
 
 ### Installation
 1. Clone the repository
-   ```bash
+
    git clone https://github.com/hassanfahmyzaky/WeatherApp.git
-   cd weather-dashboard
+   npm install
+   npm run dev

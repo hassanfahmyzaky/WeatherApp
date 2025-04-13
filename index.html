@@ -1,13 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Search for a city..." id="city-input">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+            <div class="location-btn" id="location-btn"><i class="fas fa-location-arrow"></i></div>
+        </div>
+
+        <div class="weather-box">
+            <div class="weather-info">
+                <div class="temperature" id="temperature">24°C</div>
+                <div class="description" id="description">Sunny</div>
+                <div class="details">
+                    <div class="humidity">
+                        <i class="fas fa-tint"></i>
+                        <span id="humidity">64%</span>
+                    </div>
+                    <div class="wind">
+                        <i class="fas fa-wind"></i>
+                        <span id="wind-speed">12 km/h</span>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-icon">
+                <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon" id="weather-icon">
+                <div class="city-name" id="city-name">New York</div>
+                <div class="date" id="date">Monday, 15 May 2023</div>
+            </div>
+        </div>
+
+        <div class="forecast-container">
+            <h3>5-Day Forecast</h3>
+            <div class="forecast" id="forecast">
+                <!-- Forecast items will be added dynamically -->
+            </div>
+        </div>
+
+        <div class="unit-toggle">
+            <button class="active" id="celsius-btn">°C</button>
+            <button id="fahrenheit-btn">°F</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

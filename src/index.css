@@ -3,20 +3,25 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  @apply bg-gray-100 dark:bg-gray-900 transition-colors duration-200;
 }
 
+.weather-card {
+  @apply bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-all duration-200;
+}
 
-// File: tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
-    './*.{js,ts,jsx,tsx}',
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+.search-bar {
+  @apply flex items-center gap-2 mb-6;
+}
+
+.search-input {
+  @apply flex-1 p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark;
+}
+
+.search-button {
+  @apply p-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:bg-opacity-90 transition-colors;
+}
+
+.error-message {
+  @apply bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 p-4 rounded-lg mb-6;
+}
